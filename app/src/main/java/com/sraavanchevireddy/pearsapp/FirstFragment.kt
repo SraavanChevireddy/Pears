@@ -34,17 +34,20 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
-        binding.button.setOnClickListener {
             val bundle = bundleOf("hindi_poems" to String)
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         }
+        binding.button.setOnClickListener {
+            val bundle = bundleOf("english_poems" to String)
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
+        }
         binding.button2.setOnClickListener {
-
+            val bundle = bundleOf("alphabets" to String)
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         }
         binding.button3.setOnClickListener {
-
+            val bundle = bundleOf("numbers" to String)
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         }
     }
 
